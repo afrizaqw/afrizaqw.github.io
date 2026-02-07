@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 0%, #000000 40%, #500000 75%, #b30000 100%) !important;
+  background-attachment: fixed !important;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 16px;
+  color: white;
+}
+
+/* --- PERBAIKAN CARD (TOMBOL) --- */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+  /* Tambahan biar sejajar & full width */
+  width: 100%; 
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.card p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* --- DROPDOWN LOGIC --- */
+.dropdown-content {
+  display: none; /* Sembunyi awal */
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 14px 14px;
+  margin-top: -2px; /* Biar nyambung pas kebuka */
+  width: 100%;
+}
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.show {
+  display: flex !important; /* JS bakal panggil ini */
+}
+
+.dropdown-btn.active {
+  border-radius: 14px 14px 0 0;
+}
+
+/* --- BANNER & HEADER (TETAP SAMA) --- */
+.banner {
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: #111;
+}
+
+.title-text h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.title-text p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
