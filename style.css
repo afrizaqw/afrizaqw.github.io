@@ -109,7 +109,7 @@ footer {
   width: 42px;
   height: 42px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -117,11 +117,11 @@ footer {
   transition: 0.3s;
 }
 
-/* Biar SVG-nya nggak item dan ukurannya pas */
-.social-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: #ffffff; /* Paksa warna putih */
+/* Atur ukuran gambarnya agar pas di tengah */
+.social-icon img {
+  width: 22px;  /* Ukuran ikon */
+  height: 22px;
+  object-fit: contain; /* Biar gambar gak gepeng */
 }
 
 .social-icon:hover {
