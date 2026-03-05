@@ -25,14 +25,17 @@
       </div>
     </div>
 
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img src="assets/slideone.png" style="width:100%; border-radius: 14px;">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/slideone.png" class="banner-img"></div>
+        <div class="swiper-slide"><img src="assets/slidetwo.png" class="banner-img"></div>
       </div>
-      <div class="mySlides fade">
-        <img src="assets/slidetwo.png" style="width:100%; border-radius: 14px;">
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <div style="text-align:center; margin-top: 10px;">
       <span class="dot"></span> 
