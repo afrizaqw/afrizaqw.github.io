@@ -89,10 +89,10 @@ body {
   border-radius: 14px 14px 0 0;
 }
 
-/* --- BANNER & HEADER (TETAP SAMA) --- */
+/* --- BANNER & HEADER (VERSI FIX) --- */
 .banner {
   width: 100%;
-  aspect-ratio: 16 / 6;
+  /* Hapus aspect-ratio supaya mengikuti tinggi asli gambar lo */
   overflow: hidden;
   border-radius: 14px;
   margin-bottom: 24px;
@@ -100,8 +100,8 @@ body {
 
 .banner-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* Biar tingginya menyesuaikan lebar secara otomatis */
+  object-fit: contain; /* Biar seluruh gambar masuk tanpa kepotong */
   display: block;
 }
 
