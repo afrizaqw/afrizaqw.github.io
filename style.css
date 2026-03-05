@@ -130,3 +130,10 @@ footer {
   transform: translateY(-3px);
 }
 
+/* Paksa ikon biar mepet banget */
+h1 img {
+    margin-left: -5px !important; /* Gunakan !important biar menang melawan CSS lain */
+    display: inline !important;
+    vertical-align: middle;
+}
+
