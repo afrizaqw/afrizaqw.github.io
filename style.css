@@ -119,9 +119,10 @@ footer {
 
 /* Atur ukuran gambarnya agar pas di tengah */
 .social-icon img {
-  width: 22px;  /* Ukuran ikon */
-  height: 22px;
-  object-fit: contain; /* Biar gambar gak gepeng */
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain !important;
+  display: block !important; /* Tambahkan ini agar tidak ada celah aneh */
 }
 
 .social-icon:hover {
