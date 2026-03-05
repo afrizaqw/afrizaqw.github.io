@@ -98,36 +98,34 @@ footer {
   opacity: 0.6;
 }
 
-.social-footer { display: flex; justify-content: center; gap: 15px; margin: 30px 0 10px 0; }
-/* 1. Pastikan .social-icon punya ukuran yang mengikat konten di dalamnya */
+.social-footer { 
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin: 30px 0 10px 0; 
+}
+
 .social-icon {
   width: 42px;
   height: 42px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  overflow: hidden; /* Tambahkan ini agar SVG tidak keluar jalur */
-}
-
-/* 2. Paksa SVG mengikuti ukuran parent-nya dan selalu di tengah */
-.social-icon svg {
-  display: block;
-  width: 20px;  /* Atur ukuran ikon di sini */
-  height: 20px; /* Atur ukuran ikon di sini */
-  fill: white;  /* Pastikan warna ikon putih */
   transition: 0.3s;
 }
 
-/* 3. Efek hover yang konsisten */
+/* Biar SVG-nya nggak item dan ukurannya pas */
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff; /* Paksa warna putih */
+}
+
 .social-icon:hover {
-  background: rgba(255, 0, 0, 0.4) !important;
-  transform: translateY(-5px);
-  border-color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
 }
 
