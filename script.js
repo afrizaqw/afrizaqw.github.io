@@ -1,19 +1,32 @@
-// --- KODE SLIDER BANNER ---
-let index = 0;
-const slides = document.querySelectorAll(".banner-img"); // Pastikan class sesuai
+// --- 1. KODE SLIDER BANNER (Otomatis & Smooth) ---
+let slideIndex = 0;
 
-if (slides.length > 1) {
-    setInterval(() => {
-        // Logika slider sederhana
-        // (Jika lo pake animasi CSS, kode ini perlu disesuaikan)
-    }, 3000);
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    
+    // Sembunyiin semua slide
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    // Tampilkan slide yang aktif
+    slides[slideIndex-1].style.display = "block";  
+    
+    // Ganti slide tiap 4 detik
+    setTimeout(showSlides, 4000); 
 }
 
-// --- KODE DROPDOWN (PASTIKAN f KECIL) ---
+// Jalankan slider saat halaman dibuka
+showSlides();
+
+
+// --- 2. KODE DROPDOWN (Fungsi yang sudah lo punya) ---
 function toggleDropdown(id) {
     const content = document.getElementById(id);
-    
-    // 1. Cek apakah element ketemu
+
     if (!content) {
         console.error("ID tidak ditemukan: " + id);
         return;
@@ -21,7 +34,7 @@ function toggleDropdown(id) {
 
     const btn = content.previousElementSibling;
 
-    // 2. Tutup dropdown lain yang lagi kebuka
+    // Tutup dropdown lain
     document.querySelectorAll('.dropdown-content').forEach(el => {
         if (el.id !== id) {
             el.classList.remove('show');
@@ -31,10 +44,8 @@ function toggleDropdown(id) {
         }
     });
 
-    // 3. Toggle class show untuk memunculkan isi
+    // Toggle class
     content.classList.toggle('show');
-    
-    // 4. Toggle class active untuk ganti style tombol
     if (btn) {
         btn.classList.toggle('active');
     }

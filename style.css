@@ -89,20 +89,34 @@ body {
   border-radius: 14px 14px 0 0;
 }
 
-/* --- BANNER & HEADER (VERSI FIX) --- */
-.banner {
+/* --- BANNER SLIDER (VERSI BARU) --- */
+.slideshow-container {
   width: 100%;
-  /* Hapus aspect-ratio supaya mengikuti tinggi asli gambar lo */
-  overflow: hidden;
-  border-radius: 14px;
+  position: relative;
   margin-bottom: 24px;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
 }
 
 .banner-img {
   width: 100%;
-  height: auto; /* Biar tingginya menyesuaikan lebar secara otomatis */
-  object-fit: contain; /* Biar seluruh gambar masuk tanpa kepotong */
+  height: auto;
+  border-radius: 14px;
   display: block;
+}
+
+/* Animasi Smooth */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 .top-header {
