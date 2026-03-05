@@ -114,9 +114,12 @@ footer {
   transition: all 0.3s ease;
 }
 
-.social-icon i {
-  font-family: "Font Awesome 6 Brands" !important;
-  font-style: normal;
+.social-icon svg {
   display: block;
+  transition: 0.3s;
+}
+
+.social-icon:hover svg {
+  fill: white; /* Ikon tetap putih saat hover */
 }
 
