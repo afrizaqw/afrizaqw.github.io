@@ -1,6 +1,9 @@
-* {
+/* --- RESET & GLOBAL --- */
+*, *:before, *:after {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent !important; /* Hapus kotak saat klik */
+  outline: none !important;
 }
 
 body {
@@ -11,17 +14,19 @@ body {
   background: linear-gradient(180deg, #000000 0%, #000000 40%, #500000 75%, #b30000 100%) !important;
   background-attachment: fixed !important;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper {
   width: 100%;
   max-width: 420px;
+  flex: 1; /* Biar footer stay di bawah */
   padding: 16px;
   color: white;
 }
 
-/* --- PERBAIKAN CARD (TOMBOL) --- */
+/* --- KOMPONEN --- */
 .card {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
@@ -32,38 +37,26 @@ body {
   align-items: center;
   color: white;
   text-decoration: none;
-  transition: 0.2s;
-  /* Tambahan biar sejajar & full width */
-  width: 100%; 
+  width: 100%;
   border: none;
   cursor: pointer;
   text-align: left;
+  transition: 0.2s;
 }
 
-.card:hover {
-  background: rgba(255,255,255,0.15);
-}
+.card:hover { background: rgba(255,255,255,0.15); }
+.card h3 { margin: 0; font-size: 15px; }
+.card p { margin: 4px 0 0; font-size: 12px; opacity: 0.8; }
 
-.card h3 {
-  margin: 0;
-  font-size: 15px;
-}
-
-.card p {
-  margin: 4px 0 0;
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-/* --- DROPDOWN LOGIC --- */
+/* --- DROPDOWN --- */
 .dropdown-content {
-  display: none; /* Sembunyi awal */
+  display: none;
   flex-direction: column;
   gap: 5px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 0 0 14px 14px;
-  margin-top: -2px; /* Biar nyambung pas kebuka */
+  margin-top: -2px;
   width: 100%;
 }
 
@@ -77,90 +70,35 @@ body {
   transition: 0.3s;
 }
 
-.dropdown-content a:hover {
-  background: rgba(255, 0, 0, 0.3);
-}
+.dropdown-content a:hover { background: rgba(255, 0, 0, 0.3); }
+.show { display: flex !important; }
+.dropdown-btn.active { border-radius: 14px 14px 0 0; }
 
-.show {
-  display: flex !important; /* JS bakal panggil ini */
-}
+/* --- BANNER (SWIPER) --- */
+.swiper { width: 100%; border-radius: 14px; margin-bottom: 24px; position: relative; }
+.banner-img { width: 100%; display: block; }
+.swiper-pagination-bullet { background: white !important; opacity: 0.6; }
+.swiper-pagination-bullet-active { background: #3897f0 !important; opacity: 1; }
 
-.dropdown-btn.active {
-  border-radius: 14px 14px 0 0;
-}
+.top-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.7); background: #111; }
+.title-text h1 { margin: 0; font-size: 18px; }
+.title-text p { margin: 2px 0 0; font-size: 12px; opacity: 0.8; }
+.links { display: flex; flex-direction: column; gap: 12px; }
 
-/* --- BANNER SLIDER (SWIPER) --- */
-.swiper {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.banner-img {
-  width: 100%;
-  display: block;
-}
-
-/* Biar titik-titik ada di DALAM gambar */
-.swiper-pagination-bullet {
-  background: white !important;
-  opacity: 0.6;
-}
-
-.swiper-pagination-bullet-active {
-  background: #3897f0 !important;
-  opacity: 1;
-}
-
-.top-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.7);
-  background: #111;
-}
-
-.title-text h1 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.title-text p {
-  margin: 2px 0 0;
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
+/* --- FOOTER & SOSIAL --- */
 footer {
+  width: 100%;
+  max-width: 420px;
   text-align: center;
-  margin-top: 30px;
+  padding: 20px 0;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Garis pembatas */
   font-size: 12px;
   opacity: 0.6;
 }
 
-/* --- SOSIAL MEDIA ICONS (GAYA ALWIKOBRA) --- */
-.social-footer {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0 10px 0; /* Jarak antara tombol dan footer */
-}
-
+.social-footer { display: flex; justify-content: center; gap: 15px; margin: 30px 0 10px 0; }
 .social-icon {
   width: 42px;
   height: 42px;
@@ -176,13 +114,8 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Warna spesifik biar makin pro */
-.social-icon.tiktok:hover { background: #000000; box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
-.social-icon.instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
-.social-icon.facebook:hover { background: #1877F2; }
-.social-icon.youtube:hover { background: #FF0000; }
-
 .social-icon:hover {
+  background: rgba(255, 0, 0, 0.4) !important; /* Merah transparan konsisten */
   transform: translateY(-5px);
   border-color: white;
 }
