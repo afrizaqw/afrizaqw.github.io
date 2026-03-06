@@ -194,5 +194,38 @@ h1 img {
   display: flex;
   justify-content: flex-start; /* INI YANG NGATUR RATA KIRI */
   padding: 10px;
+
 }
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verified-icon {
+  width: 16px;
+  height: 16px;
+}
+
 
