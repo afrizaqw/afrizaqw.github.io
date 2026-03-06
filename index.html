@@ -54,69 +54,21 @@
       </div>
     </div>
     
-    <div id="sheet-admin" class="sheet-overlay" onclick="closeSheet('sheet-admin')">
-      <div class="sheet-content" onclick="event.stopPropagation()">
-        <div class="sheet-header">
-          <div class="drag-handle"></div>
-          <h3>Hubungi Admin</h3>
+    <div class="links">
+      <a href="admin.html" class="menu-card">
+        <div class="menu-info">
+          <h3>Kontak WhatsApp Admin.</h3>
+          <p>Klik untuk buka halaman kontak</p>
         </div>
-        <div class="sheet-body">
-          <a href="https://wa.me/6288295863159" class="contact-item" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp Jasa Post [Fast Respon]</span>
-            <div class="status-dot"></div>
-          </a>
-          <a href="https://wa.me/6281282823485" class="contact-item" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp Rekber</span>
-            <div class="status-dot"></div>
-          </a>
+      </a>
+      
+      <a href="grup.html" class="menu-card">
+        <div class="menu-info">
+          <h3>Grup & Saluran WhatsApp Admin.</h3>
+          <p>Klik untuk buka halaman grup</p>
         </div>
-      </div>
+      </a>
     </div>
-    
-    <div id="sheet-grup" class="sheet-overlay" onclick="closeSheet('sheet-grup')">
-      <div class="sheet-content" onclick="event.stopPropagation()">
-        <div class="sheet-header">
-          <div class="drag-handle"></div>
-          <h3>Grup & Saluran</h3>
-        </div>
-        <div class="sheet-body">
-          <a href="https://chat.whatsapp.com/EvzuC2bEuVK2GZVbR748tj" class="contact-item" target="_blank">
-            <i class="fas fa-users"></i>
-            <span>Grup JB ALL GAME !</span>
-          </a>
-          <a href="https://whatsapp.com/channel/0029Vam0Y4VJJhzh13Tn1s3j" class="contact-item" target="_blank">
-            <i class="fas fa-images"></i>
-            <span>Saluran Mentahan FF HD</span>
-          </a>
-          <a href="https://whatsapp.com/channel/0029VbAxzFZ8fewus6PrB50j" class="contact-item" target="_blank">
-            <i class="fas fa-bullhorn"></i>
-            <span>Saluran Update Stok</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <script>
-    function openSheet(id) {
-        const sheet = document.getElementById(id);
-        sheet.style.display = 'flex';
-        // Kasih delay dikit biar animasinya sempet kepanggil
-        setTimeout(() => { 
-            sheet.classList.add('active'); 
-        }, 10);
-    }
-    
-    function closeSheet(id) {
-        const sheet = document.getElementById(id);
-        sheet.classList.remove('active');
-        // Tunggu animasi slide-down selesai (0.3s) baru ilangin display-nya
-        setTimeout(() => { 
-            sheet.style.display = 'none'; 
-        }, 300);
-    }
-    </script>
 
     <div class="social-footer">
       <a href="https://tiktok.com/@afrizanpc" class="social-icon" target="_blank">
