@@ -200,3 +200,18 @@ h1 img {
 .card-single:hover { background: rgba(255,255,255,0.15); }
 
 }
+
+/* Style khusus untuk tombol kembali */
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 40px;  /* Atur lebar sesuai keinginan lo */
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  opacity: 0.7; /* Sedikit efek pudar saat disentuh */
+}
+
