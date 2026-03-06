@@ -22,7 +22,7 @@ body {
   width: 100%;
   max-width: 420px;
   flex: 1; /* Biar footer stay di bawah */
-  padding: 16px;
+  padding: 9px;
   color: white;
 }
 
@@ -47,32 +47,6 @@ body {
 .card:hover { background: rgba(255,255,255,0.15); }
 .card h3 { margin: 0; font-size: 15px; }
 .card p { margin: 4px 0 0; font-size: 12px; opacity: 0.8; }
-
-/* --- DROPDOWN --- */
-.dropdown-content {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 0 0 14px 14px;
-  margin-top: -2px;
-  width: 100%;
-}
-
-.dropdown-content a {
-  color: white;
-  text-decoration: none;
-  padding: 12px;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.dropdown-content a:hover { background: rgba(255, 0, 0, 0.3); }
-.show { display: flex !important; }
-.dropdown-btn.active { border-radius: 14px 14px 0 0; }
 
 /* --- BANNER (SWIPER) --- */
 .swiper { width: 100%; border-radius: 14px; margin-bottom: 24px; position: relative; }
@@ -198,8 +172,6 @@ h1 img {
 }
 
 .card-single:hover { background: rgba(255,255,255,0.15); }
-
-}
 
 /* Style khusus untuk tombol kembali */
 .back-button {
