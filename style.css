@@ -2,7 +2,7 @@
 *, *:before, *:after {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: transparent !important; /* Hapus kotak saat klik */
   outline: none !important;
 }
 
@@ -21,17 +21,16 @@ body {
 .wrapper {
   width: 100%;
   max-width: 420px;
-  padding: 16px; /* Samakan padding biar nggak "kegedean" di pinggir */
+  flex: 1; /* Biar footer stay di bawah */
+  padding: 9px;
   color: white;
 }
 
-/* --- KOMPONEN LINK --- */
-.links { display: flex; flex-direction: column; gap: 12px; }
-
-.card-single {
+/* --- KOMPONEN --- */
+.card {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
-  padding: 18px 16px;
+  padding: 14px 16px;
   border-radius: 14px;
   display: flex;
   justify-content: space-between;
@@ -41,11 +40,140 @@ body {
   width: 100%;
   border: none;
   cursor: pointer;
-  min-height: 60px;
+  text-align: left;
   transition: 0.2s;
 }
 
-.card-single:hover { background: rgba(255,255,255,0.15); }
+.card:hover { background: rgba(255,255,255,0.15); }
+.card h3 { margin: 0; font-size: 15px; }
+.card p { margin: 4px 0 0; font-size: 12px; opacity: 0.8; }
+
+/* --- BANNER (SWIPER) --- */
+.swiper { width: 100%; border-radius: 14px; margin-bottom: 24px; position: relative; }
+.banner-img { width: 100%; display: block; }
+.swiper-pagination-bullet { background: white !important; opacity: 0.6; }
+.swiper-pagination-bullet-active { background: #3897f0 !important; opacity: 1; }
+
+.top-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.7); background: #111; }
+.title-text h1 { margin: 0; font-size: 18px; }
+.title-text p { margin: 2px 0 0; font-size: 12px; opacity: 0.8; }
+.links { display: flex; flex-direction: column; gap: 12px; }
+
+/* --- FOOTER & SOSIAL --- */
+footer {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Garis pembatas */
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 10px 0;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/* Atur ukuran gambarnya agar pas di tengah */
+.social-icon img {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain !important;
+  display: block !important; /* Tambahkan ini agar tidak ada celah aneh */
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Paksa ikon biar mepet banget */
+h1 img {
+    margin-left: -5px !important; /* Gunakan !important biar menang melawan CSS lain */
+    display: inline !important;
+    vertical-align: middle;
+}
+
+/* --- SHEET OVERLAY --- */
+.sheet-overlay {
+    display: none; /* INI WAJIB: Biar gak nongol berantakan di bawah */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sheet-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* --- SHEET CONTENT --- */
+.sheet-content {
+    background: #1a1a1a;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.sheet-overlay.active .sheet-content {
+    transform: translateY(0);
+}
+
+.page-links {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tambahkan ini untuk admin.html & grup.html */
+.card-single {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 18px 16px; /* Padding sedikit lebih besar buat handle 1 baris teks */
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+  min-height: 60px; /* Biar ukurannya tetep konsisten */
+  margin-bottom: 6px; /* Jarak antar tombol */
+}
+
+.back-button:hover {
+  opacity: 0.7; /* Sedikit efek pudar saat disentuh */
+}
 
 /* --- PROFIL HEADER (ADMIN/GRUP) --- */
 .profile-container {
