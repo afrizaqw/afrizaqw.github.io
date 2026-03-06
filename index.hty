@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>afrizanpc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="afrizanpc">
+  <meta property="og:description" content="Jual beli akun aman & terpercaya">
+  <meta property="og:image" content="https://afrizaqw.github.io/assets/logo.jpeg">
+  <meta property="og:url" content="https://afrizaqw.github.io/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=6.0"> 
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="top-header">
+      <img src="assets/logo.jpeg" class="logo">
+      <div class="title-text">
+        <h1 style="margin: 0; line-height: 1;">
+          afrizanpc<img src="assets/ceklis.png" alt="Verified" style="width: 31px; height: 31px; vertical-align: middle; margin-left: -5px; margin-bottom: 5px;">
+        </h1>
+        <p style="margin: 0; margin-top: -5px;">Jual beli akun aman & terpercaya</p>
+      </div>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/slideone.png" class="banner-img"></div>
+        <div class="swiper-slide"><img src="assets/slidetwo.png" class="banner-img"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="links">
+      <a href="admin.html" class="card">
+        <div>
+          <h3 style="margin: 0; font-size: 15px; color: white;">Kontak WhatsApp Admin</h3>
+          <p style="margin: 4px 0 0; font-size: 12px; color: #ccc;">Pilih kontak whatsapp di bawah ini</p>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+        <path d="M5 5h6v2H7v10h10v-4h2v6H5z"/>
+        </svg>
+      </a>
+
+      <a href="grup.html" class="card">
+        <div>
+          <h3 style="margin: 0; font-size: 15px; color: white;">Grup & Saluran WhatsApp</h3>
+          <p style="margin: 4px 0 0; font-size: 12px; color: #ccc;">Pilih grup atau saluran yang ingin dilihat</p>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+        <path d="M5 5h6v2H7v10h10v-4h2v6H5z"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="social-footer">
+      <a href="https://tiktok.com/@afrizanpc" class="social-icon" target="_blank">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://instagram.com/afrizanpc" class="social-icon" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/share/1FEAJJ8fd8/" class="social-icon" target="_blank">
+        <img src="assets/facebook.png" alt="Facebook">
+      </a>
+    </div>
+
+    <footer>© 2026 afrizanpc • Made in Indonesia</footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js?v=999"></script>
+</body>
+</html>
+
