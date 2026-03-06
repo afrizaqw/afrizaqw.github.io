@@ -215,3 +215,12 @@ h1 img {
   opacity: 0.7; /* Sedikit efek pudar saat disentuh */
 }
 
+/* Biar tombol kembali tetap di kiri meskipun body pakai align-items: center */
+.back-nav-container {
+  width: 100%;
+  max-width: 420px; /* Samain sama wrapper lo */
+  display: flex;
+  justify-content: flex-start; /* INI YANG NGATUR RATA KIRI */
+  padding: 10px;
+}
+
