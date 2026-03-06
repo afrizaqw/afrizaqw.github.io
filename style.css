@@ -201,12 +201,12 @@ h1 img {
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
 }
 
 .verified-icon {
-  width: 22px !important;
-  height: 22px !important;
+  width: 25px !important;
+  height: 25px !important;
 }
 
 /* --- TOMBOL KEMBALI --- */
