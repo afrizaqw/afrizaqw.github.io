@@ -177,10 +177,11 @@ h1 img {
   gap: 12px;
 }
 
+/* Tambahkan ini untuk admin.html & grup.html */
 .card-single {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
-  padding: 18px 16px; /* Padding sedikit lebih besar biar tinggi */
+  padding: 18px 16px; /* Padding sedikit lebih besar buat handle 1 baris teks */
   border-radius: 14px;
   display: flex;
   justify-content: space-between;
@@ -192,5 +193,10 @@ h1 img {
   cursor: pointer;
   text-align: left;
   transition: 0.2s;
+  min-height: 60px; /* Biar ukurannya tetep konsisten */
+  margin-bottom: 12px; /* Jarak antar tombol */
 }
 
+.card-single:hover { background: rgba(255,255,255,0.15); }
+
+}
